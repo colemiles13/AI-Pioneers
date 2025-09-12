@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alan Turing: Pioneer of AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #1f2937;
+        }
+        .slide-container {
+            position: relative;
+            width: 90%;
+            max-width: 960px;
+            height: 80vh;
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .slide {
+            display: none;
+            flex-grow: 1;
+        }
+        .slide.active {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            color: #10b981;
+        }
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #1f2937;
+        }
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #374151;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 2rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        .slide-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+        }
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            color: #ffffff;
+            background-color: #10b981;
+            box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.4), 0 2px 4px -1px rgba(16, 185, 129, 0.2);
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #059669;
+            box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.4), 0 4px 6px -2px rgba(16, 185, 129, 0.2);
+            transform: translateY(-2px);
+        }
+        .btn:disabled {
+            background-color: #d1d5db;
+            color: #6b7280;
+            cursor: not-allowed;
+            box-shadow: none;
+            transform: none;
+        }
+        .link-btn {
+            display: inline-block;
+            background-color: #3b82f6;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            text-decoration: none;
+            margin-top: 0.5rem;
+            transition: background-color 0.3s ease;
+        }
+        .link-btn:hover {
+            background-color: #2563eb;
+        }
+        .img-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem 0;
+        }
+        .slide-content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="slide-container">
+    <!-- Slide 1: Title -->
+    <div id="slide1" class="slide active">
+        <div class="flex flex-col items-center justify-center flex-grow">
+            <h1 class="text-4xl">Alan Turing: Pioneer of AI</h1>
+            <p class="mt-4 text-center text-lg text-gray-600">A presentation on the life and work of a genius who shaped modern technology.</p>
+            <div class="img-container mt-8">
+                <img src="https://placehold.co/400x300/e5e7eb/6b7280?text=Alan+Turing+Portrait" alt="A portrait of Alan Turing" class="rounded-xl shadow-lg">
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 2: Early Life -->
+    <div id="slide2" class="slide">
+        <div class="flex-grow">
+            <h2>Early Life and Education</h2>
+            <p>Alan Mathison Turing was born in London on June 23, 1912. He showed an early aptitude for mathematics and science, despite a formal education that often prioritized the classics.</p>
+            <div class="img-container">
+                <img src="https://placehold.co/400x250/e5e7eb/6b7280?text=Young+Alan+Turing" alt="A photo of a young Alan Turing" class="rounded-xl shadow-lg">
+            </div>
+            <p>He attended Sherborne School, then went on to study at King's College, Cambridge, where he graduated in 1934. He completed his Ph.D. at Princeton University in 1938.</p>
+            <div class="mt-4">
+                <h3>Key Fact:</h3>
+                <p>Despite his brilliance, Turing was an independent thinker who found it difficult to conform to the traditional schooling system.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3: Major Contributions -->
+    <div id="slide3" class="slide">
+        <div class="flex-grow">
+            <h2>Major Contributions</h2>
+            <p>Turing's work laid the foundation for computer science and his efforts during WWII were pivotal.</p>
+            <div class="slide-content-grid">
+                <div>
+                    <h3>The Bombe</h3>
+                    <p>During World War II, Turing worked at Bletchley Park, the center for British codebreaking. He played a crucial role in deciphering German codes from the Enigma machine by designing the **Bombe**, an electromechanical device that helped automate the decryption process.</p>
+                    <a href="https://www.youtube.com/watch?v=G2_l0xW1C5w" target="_blank" class="link-btn">Watch a Video on the Enigma Machine</a>
+                </div>
+                <div class="img-container">
+                    <img src="https://placehold.co/300x200/e5e7eb/6b7280?text=Enigma+Machine" alt="An image of an Enigma machine" class="rounded-xl shadow-lg">
+                </div>
+                <div>
+                    <h3>The Turing Machine</h3>
+                    <p>In his 1936 paper, he proposed the **Turing machine**, a theoretical model of a universal computing device. This abstract concept is considered the blueprint for the modern computer.</p>
+                    <a href="https://plato.stanford.edu/entries/turing-machine/" target="_blank" class="link-btn">Read More on the Turing Machine</a>
+                </div>
+                <div class="img-container">
+                    <img src="https://placehold.co/300x200/e5e7eb/6b7280?text=Turing+Machine+Diagram" alt="A diagram of a Turing machine" class="rounded-xl shadow-lg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 4: AI Contributions -->
+    <div id="slide4" class="slide">
+        <div class="flex-grow">
+            <h2>Contributions to Artificial Intelligence</h2>
+            <p>Turing is often called the "father of AI." His ideas laid the groundwork for the field before the term "artificial intelligence" was even coined.</p>
+            <div class="slide-content-grid">
+                <div>
+                    <h3>The Turing Test</h3>
+                    <p>In his 1950 paper "Computing Machinery and Intelligence," Turing proposed the **Turing Test** (also called the "Imitation Game"). The test evaluates a machine's ability to exhibit intelligent behavior indistinguishable from that of a human.</p>
+                    <a href="https://www.britannica.com/technology/Turing-test" target="_blank" class="link-btn">Explore the Turing Test</a>
+                </div>
+                <div class="img-container">
+                    <img src="https://placehold.co/300x200/e5e7eb/6b7280?text=Turing+Test+Diagram" alt="A diagram illustrating the Turing Test" class="rounded-xl shadow-lg">
+                </div>
+                <div>
+                    <h3>Learning Machines</h3>
+                    <p>Turing's paper also discussed the potential for machines to learn. He suggested that a "thinking machine" should be given the "blank mind of an infant" and trained through experience. This was a direct precursor to modern machine learning.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5: Influence on Modern AI -->
+    <div id="slide5" class="slide">
+        <div class="flex-grow">
+            <h2>Influence on Modern AI</h2>
+            <p>Turing's conceptual work continues to be a cornerstone of modern AI.</p>
+            <ul class="list-disc pl-8 mt-4">
+                <li>
+                    <h3 class="font-semibold">Theoretical Foundation</h3>
+                    <p>The universal Turing machine provided the theoretical model for the programmable, general-purpose computers that power all AI applications today.</p>
+                </li>
+                <li class="mt-4">
+                    <h3 class="font-semibold">Benchmark for Intelligence</h3>
+                    <p>The Turing Test remains a philosophical and practical benchmark for AI research, encouraging the development of machines with natural language understanding and generation capabilities.</p>
+                </li>
+                <li class="mt-4">
+                    <h3 class="font-semibold">Machine Learning</h3>
+                    <p>Turing's early ideas on "learning machines" directly influenced the development of the field of machine learning, which is at the heart of technologies like predictive analytics, chatbots, and autonomous vehicles.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="slide-footer">
+        <button id="prevBtn" class="btn" disabled>Previous</button>
+        <span id="slide-number" class="text-sm text-gray-500">Slide 1 of 5</span>
+        <button id="nextBtn" class="btn">Next</button>
+    </div>
+</div>
+
+<script>
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const slideNumberSpan = document.getElementById('slide-number');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === index) {
+                slide.classList.add('active');
+            }
+        });
+        currentSlide = index;
+        updateButtons();
+        updateSlideNumber();
+    }
+
+    function updateButtons() {
+        prevBtn.disabled = currentSlide === 0;
+        nextBtn.disabled = currentSlide === slides.length - 1;
+    }
+
+    function updateSlideNumber() {
+        slideNumberSpan.textContent = `Slide ${currentSlide + 1} of ${slides.length}`;
+    }
+
+    prevBtn.addEventListener('click', () => {
+        if (currentSlide > 0) {
+            showSlide(currentSlide - 1);
+        }
+    });
+
+    nextBtn.addEventListener('click', () => {
+        if (currentSlide < slides.length - 1) {
+            showSlide(currentSlide + 1);
+        }
+    });
+
+    // Initialize the presentation
+    showSlide(0);
+</script>
+
+</body>
+</html>
