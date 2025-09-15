@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashish Vaswani: The Architect of the Transformer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1a26;
+            color: #e2e8f0;
+        }
+        .slide {
+            display: none;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        .slide.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <div id="presentation-container" class="bg-gray-800 rounded-2xl shadow-xl max-w-4xl w-full mx-auto p-8 md:p-12">
+
+        <!-- Slide Navigation -->
+        <div class="flex justify-center items-center space-x-4 mb-8">
+            <button id="prevBtn" class="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors duration-200 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <div id="slide-indicators" class="flex space-x-2"></div>
+            <button id="nextBtn" class="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors duration-200 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Slide 1: Introduction -->
+        <div id="slide-1" class="slide active text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-blue-400">Ashish Vaswani</h1>
+            <h2 class="text-2xl md:text-3xl font-medium text-gray-300 mb-6">The Architect of the Transformer</h2>
+            <p class="text-lg md:text-xl text-gray-400 mb-8">
+                Discover the computer scientist who co-authored the revolutionary paper that changed the world of AI.
+            </p>
+            <img src="https://placehold.co/800x400/1f2937/d1d5db?text=Ashish+Vaswani" alt="A portrait of Ashish Vaswani" class="w-full h-auto rounded-xl shadow-lg mb-8">
+            <button onclick="goToSlide(2)" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">Start</button>
+        </div>
+
+        <!-- Slide 2: The Transformer Architecture -->
+        <div id="slide-2" class="slide">
+            <h3 class="text-3xl font-bold mb-4 text-blue-400">The Transformer Architecture</h3>
+            <div class="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8">
+                <img src="https://placehold.co/500x300/374151/9ca3af?text=Transformer+Model" alt="Illustration of a Transformer model" class="rounded-xl shadow-lg md:w-1/2">
+                <div class="md:w-1/2">
+                    <p class="text-lg text-gray-400 mb-4">
+                        In 2017, Ashish Vaswani and his colleagues at Google introduced a new neural network architecture called the **Transformer**.
+                    </p>
+                    <p class="text-lg text-gray-400">
+                        This model was a major step forward, as it could process entire sequences of data (like sentences) all at once, rather than one piece at a time.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: "Attention Is All You Need" -->
+        <div id="slide-3" class="slide">
+            <h3 class="text-3xl font-bold mb-4 text-blue-400">"Attention Is All You Need"</h3>
+            <div class="space-y-6">
+                <div class="p-6 bg-gray-700 rounded-lg shadow-inner">
+                    <h4 class="text-2xl font-bold text-blue-400 mb-2">The Groundbreaking Paper</h4>
+                    <p class="text-lg text-gray-400">
+                        The Transformer was introduced in a now-famous research paper titled, **"Attention Is All You Need."**
+                    </p>
+                </div>
+                <div class="p-6 bg-gray-700 rounded-lg shadow-inner">
+                    <h4 class="text-2xl font-bold text-blue-400 mb-2">The Power of Attention</h4>
+                    <p class="text-lg text-gray-400">
+                        The key idea was the **"attention mechanism,"** which allowed the model to focus on the most important parts of a sentence, improving its ability to understand context.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: The Impact on AI -->
+        <div id="slide-4" class="slide">
+            <h3 class="text-3xl font-bold mb-4 text-blue-400">The Impact on AI</h3>
+            <p class="text-lg text-gray-400 mb-6">
+                The Transformer architecture became the foundational building block for almost all modern large language models, including:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-center">
+                <div class="p-4 bg-gray-700 rounded-lg shadow-inner">
+                    <h4 class="text-xl font-bold text-blue-400">GPT Models</h4>
+                    <p class="text-gray-400">Powers advanced conversational AI.</p>
+                </div>
+                <div class="p-4 bg-gray-700 rounded-lg shadow-inner">
+                    <h4 class="text-xl font-bold text-blue-400">BERT</h4>
+                    <p class="text-gray-400">Used for powerful search and language understanding.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: A Lasting Legacy -->
+        <div id="slide-5" class="slide">
+            <h3 class="text-3xl font-bold mb-4 text-blue-400">A Lasting Legacy</h3>
+            <p class="text-lg text-gray-400 mb-6">
+                Ashish Vaswani's work has had a profound impact on the field of AI. The Transformer architecture is now a core component of countless systems and has enabled the development of the most powerful and creative AI models we have today.
+            </p>
+        </div>
+
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const indicators = document.getElementById('slide-indicators');
+        let currentSlide = 0;
+
+        function updateIndicators() {
+            indicators.innerHTML = '';
+            slides.forEach((_, index) => {
+                const indicator = document.createElement('span');
+                indicator.className = `w-3 h-3 rounded-full mx-1 transition-all duration-300 ${index === currentSlide ? 'bg-blue-600' : 'bg-gray-500'}`;
+                indicator.onclick = () => goToSlide(index + 1);
+                indicators.appendChild(indicator);
+            });
+        }
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+            });
+            slides[index - 1].classList.add('active');
+            currentSlide = index - 1;
+            updateIndicators();
+        }
+
+        function goToSlide(slideIndex) {
+            showSlide(slideIndex);
+        }
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (currentSlide > 0) {
+                goToSlide(currentSlide);
+            }
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            if (currentSlide < slides.length - 1) {
+                goToSlide(currentSlide + 2);
+            }
+        });
+
+        // Initial setup
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(1);
+        });
+    </script>
+</body>
+</html>
