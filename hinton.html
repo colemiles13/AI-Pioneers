@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geoffrey Hinton: The Godfather of Deep Learning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0fdf4;
+            color: #064e3b;
+        }
+        .slide {
+            display: none;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        .slide.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <div id="presentation-container" class="bg-white rounded-2xl shadow-xl max-w-4xl w-full mx-auto p-8 md:p-12">
+
+        <!-- Slide Navigation -->
+        <div class="flex justify-center items-center space-x-4 mb-8">
+            <button id="prevBtn" class="bg-green-700 text-white p-2 rounded-full hover:bg-green-800 transition-colors duration-200 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <div id="slide-indicators" class="flex space-x-2"></div>
+            <button id="nextBtn" class="bg-green-700 text-white p-2 rounded-full hover:bg-green-800 transition-colors duration-200 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Slide 1: Introduction -->
+        <div id="slide-1" class="slide active text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-green-950">Geoffrey Hinton</h1>
+            <h2 class="text-2xl md:text-3xl font-medium text-gray-700 mb-6">The Godfather of Deep Learning</h2>
+            <p class="text-lg md:text-xl text-gray-600 mb-8">
+                Discover the work of the computer scientist whose research sparked the modern AI revolution.
+            </p>
+            
+            <img src="https://placehold.co/800x400/064e3b/ffffff?text=Geoffrey+Hinton" alt="A portrait of Geoffrey Hinton" class="w-full h-auto rounded-xl shadow-lg mb-8">
+            <button onclick="goToSlide(2)" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">Start</button>
+        </div>
+
+        <!-- Slide 2: The Backpropagation Breakthrough -->
+        <div id="slide-2" class="slide">
+            <h3 class="text-3xl font-bold mb-4 text-green-950">The Backpropagation Breakthrough</h3>
+            <div class="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8">
+                <img src="https://placehold.co/500x300/a7f3d0/064e3b?text=Neural+Network" alt="Illustration of a neural network" class="rounded-xl shadow-lg md:w-1/2">
+                <div class="md:w-1/2">
+                    <p class="text-lg text-gray-600 mb-4">
+                        In the 1980s, Geoffrey Hinton and his colleagues made a major discovery: **backpropagation**.
+                    </p>
+                    <p class="text-lg text-gray-600">
+                        This algorithm, though theorized earlier, became practical and allowed complex neural networks to "learn" by adjusting their internal connections based on their errors.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: The Deep Learning Revolution -->
+        <div id="slide-3" class="slide">
+            <h3 class="text-3xl font-bold mb-4 text-green-950">The Deep Learning Revolution</h3>
+            <div class="space-y-6">
+                <div class="p-6 bg-lime-50 rounded-lg shadow-inner">
+                    <h4 class="text-2xl font-bold text-green-950 mb-2">AlexNet and ImageNet</h4>
+                    <p class="text-lg text-gray-600">
+                        In 2012, Hinton and his students created **AlexNet**, a deep neural network that won the ImageNet computer vision competition by a huge margin.
+                    </p>
+                </div>
+                <div class="p-6 bg-lime-50 rounded-lg shadow-inner">
+                    <h4 class="text-2xl font-bold text-green-950 mb-2">A Tipping Point</h4>
+                    <p class="text-lg text-gray-600">
+                        This event showed the world the true power of deep learning and kicked off the current AI boom, leading to breakthroughs in everything from self-driving cars to voice assistants.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: A Lasting Legacy -->
+        <div id="slide-4" class="slide">
+            <h3 class="text-3xl font-bold mb-4 text-green-950">A Lasting Legacy</h3>
+            <p class="text-lg text-gray-600 mb-6">
+                Geoffrey Hinton's work laid the groundwork for the modern AI that we see all around us. He's a recipient of the Turing Award, considered the "Nobel Prize of computing," and his insights continue to shape the direction of research and development in the field.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-center">
+                <div class="p-4 bg-lime-50 rounded-lg shadow-inner">
+                    <h4 class="text-xl font-bold text-green-950">Pioneering Research</h4>
+                    <p class="text-gray-600">Established the foundations of deep learning.</p>
+                </div>
+                <div class="p-4 bg-lime-50 rounded-lg shadow-inner">
+                    <h4 class="text-xl font-bold text-green-950">The Turing Award</h4>
+                    <p class="text-gray-600">Recognized for his contributions to the field of AI.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const indicators = document.getElementById('slide-indicators');
+        let currentSlide = 0;
+
+        function updateIndicators() {
+            indicators.innerHTML = '';
+            slides.forEach((_, index) => {
+                const indicator = document.createElement('span');
+                indicator.className = `w-3 h-3 rounded-full mx-1 transition-all duration-300 ${index === currentSlide ? 'bg-green-700' : 'bg-gray-400'}`;
+                indicator.onclick = () => goToSlide(index + 1);
+                indicators.appendChild(indicator);
+            });
+        }
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+            });
+            slides[index - 1].classList.add('active');
+            currentSlide = index - 1;
+            updateIndicators();
+        }
+
+        function goToSlide(slideIndex) {
+            showSlide(slideIndex);
+        }
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (currentSlide > 0) {
+                goToSlide(currentSlide);
+            }
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            if (currentSlide < slides.length - 1) {
+                goToSlide(currentSlide + 2);
+            }
+        });
+
+        // Initial setup
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(1);
+        });
+    </script>
+</body>
+</html>
