@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mind of AI: A Tribute to Marvin Minsky</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c;
+            color: #e2e8f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .presentation-container {
+            position: relative;
+            background-color: #2d3748;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            width: 95%;
+            max-width: 900px;
+            height: 80vh;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.8s ease-in-out;
+            padding: 1rem;
+        }
+        .slide.active {
+            display: flex;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        h1, h2 {
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            max-width: 700px;
+        }
+        .slide-image {
+            max-width: 80%;
+            max-height: 300px;
+            border-radius: 0.75rem;
+            margin-bottom: 1.5rem;
+            object-fit: contain;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .link-button {
+            display: inline-block;
+            background-color: #4299e1;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            margin: 0.5rem;
+        }
+        .link-button:hover {
+            background-color: #3182ce;
+        }
+        .nav-button {
+            background-color: #718096;
+            color: white;
+            font-size: 1rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+        .nav-button:hover {
+            background-color: #4a5568;
+        }
+        .controls {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+        }
+        @media (max-width: 768px) {
+            .presentation-container {
+                padding: 1rem;
+            }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            p { font-size: 0.875rem; }
+            .controls {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="presentation-container">
+        
+        <!-- Slide 1: Title -->
+        <div class="slide active" id="slide-1">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-blue-400">The Mind of AI</h1>
+            <h2 class="text-2xl md:text-3xl font-extrabold mb-4">A Tribute to Marvin Minsky</h2>
+            <p>
+                Explore the life and groundbreaking ideas of the "father of Artificial Intelligence," whose work laid the foundation for modern computing and machine learning.
+            </p>
+            <img class="slide-image" src="https://placehold.co/600x400/2d3748/e2e8f0?text=Marvin+Minsky" alt="A black and white portrait of Marvin Minsky smiling.">
+            <a href="https://infinite.mit.edu/video/marvin-minsky" target="_blank" class="link-button">
+                Watch an Interview with Minsky
+            </a>
+        </div>
+
+        <!-- Slide 2: Early Life and Education -->
+        <div class="slide" id="slide-2">
+            <h2 class="text-3xl md:text-4xl font-bold">Early Life and Education</h2>
+            <p>
+                Born in New York City in 1927, Marvin Minsky's inquisitive mind led him to a diverse academic path. After serving in the US Navy during World War II, he earned degrees from Harvard and Princeton, where he began to explore the potential for machines to think. His Ph.D. thesis at Princeton explored how to create "self-repairing" neural networks. 
+            </p>
+             <img class="slide-image" src="https://placehold.co/600x400/2d3748/e2e8f0?text=Princeton+University" alt="An image of Princeton University's campus.">
+            <a href="https://www.webofstories.com/play/marvin.minsky/122" target="_blank" class="link-button">
+                Minsky on His Early Work
+            </a>
+        </div>
+
+        <!-- Slide 3: Major Contributions to AI -->
+        <div class="slide" id="slide-3">
+            <h2 class="text-3xl md:text-4xl font-bold">Major Contributions to AI</h2>
+            <p>
+                Minsky co-founded the MIT Artificial Intelligence Laboratory in 1959, turning it into a hub for AI research. His work, alongside colleague Seymour Papert, on the limitations of simple neural networks in the book "Perceptrons" (1969), highlighted challenges that stalled AI research for years, ironically paving the way for future breakthroughs. 
+            </p>
+            <img class="slide-image" src="https://placehold.co/600x400/2d3748/e2e8f0?text=MIT+AI+Lab+Old+Image" alt="An old photograph of the MIT AI Lab.">
+            <a href="https://www.youtube.com/watch?v=fsGeQk0X3tY" target="_blank" class="link-button">
+                A Look Back at the MIT AI Lab
+            </a>
+        </div>
+
+        <!-- Slide 4: The Society of Mind -->
+        <div class="slide" id="slide-4">
+            <h2 class="text-3xl md:text-4xl font-bold">The Society of Mind</h2>
+            <p>
+                In his seminal 1986 book, "The Society of Mind," Minsky presented a groundbreaking theory of how human intelligence could arise from the interaction of many simple, unintelligent "agents." He argued that the mind is not a single, unified entity, but rather a complex collection of interacting parts. This idea profoundly influenced fields from cognitive psychology to robotics. 
+            </p>
+            <img class="slide-image" src="https://placehold.co/600x400/2d3748/e2e8f0?text=Society+of+Mind+Concept" alt="A conceptual diagram illustrating the 'Society of Mind' theory.">
+            <a href="https://jaress.medium.com/the-turing-option-and-minskys-society-of-mind-theory-explained-4b25807b0733" target="_blank" class="link-button">
+                Read an Explanation of The Society of Mind
+            </a>
+        </div>
+
+        <!-- Slide 5: Influence on Modern AI -->
+        <div class="slide" id="slide-5">
+            <h2 class="text-3xl md:text-4xl font-bold">Influence on Modern AI</h2>
+            <p>
+                Minsky's work continues to be highly influential in modern AI. His "Perceptrons" book, despite its critiques, spurred the development of multi-layered networks that eventually overcame the limitations he identified. His "Society of Mind" theory is a key precursor to modern concepts like multi-agent systems and modular neural network architectures. 
+            </p>
+            <img class="slide-image" src="https://placehold.co/600x400/2d3748/e2e8f0?text=Modern+AI+Illustration" alt="An illustration of a modern, complex neural network.">
+            <a href="https://www.youtube.com/watch?v=wx4JXCmw_0Y" target="_blank" class="link-button">
+                Watch a Minsky Lecture
+            </a>
+        </div>
+
+        <!-- Slide 6: Conclusion -->
+        <div class="slide" id="slide-6">
+            <h2 class="text-3xl md:text-4xl font-bold">Conclusion</h2>
+            <p>
+                Marvin Minsky's legacy is defined by his visionary ideas and his unwavering belief that intelligence, in both humans and machines, is a product of immense complexity built from simple parts. He was a true pioneer whose work laid the groundwork for the AI revolution we see today. 
+            </p>
+             <img class="slide-image" src="https://placehold.co/600x400/2d3748/e2e8f0?text=Minsky+with+Robot" alt="Marvin Minsky sitting next to a robot.">
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" class="nav-button">Previous</button>
+            <button id="nextBtn" class="nav-button">Next</button>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                    if (i === index) {
+                        slide.classList.add('active');
+                    }
+                });
+                prevBtn.disabled = index === 0;
+                nextBtn.disabled = index === slides.length - 1;
+            }
+
+            prevBtn.addEventListener('click', () => {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            });
+
+            nextBtn.addEventListener('click', () => {
+                if (currentSlide < slides.length - 1) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            });
+
+            // Initialize the presentation
+            showSlide(currentSlide);
+        });
+    </script>
+
+</body>
+</html>
