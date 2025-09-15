@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph Weizenbaum: The Man Who Taught a Machine to Chat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f9ff;
+            color: #1e293b;
+        }
+        .slide {
+            display: none;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        .slide.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <div id="presentation-container" class="bg-white rounded-2xl shadow-xl max-w-4xl w-full mx-auto p-8 md:p-12">
+
+        <!-- Slide Navigation -->
+        <div class="flex justify-center items-center space-x-4 mb-8">
+            <button id="prevBtn" class="bg-sky-500 text-white p-2 rounded-full hover:bg-sky-600 transition-colors duration-200 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <div id="slide-indicators" class="flex space-x-2"></div>
+            <button id="nextBtn" class="bg-sky-500 text-white p-2 rounded-full hover:bg-sky-600 transition-colors duration-200 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Slide 1: Introduction -->
+        <div id="slide-1" class="slide active text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-sky-800">Joseph Weizenbaum</h1>
+            <h2 class="text-2xl md:text-3xl font-medium text-gray-700 mb-6">The Man Who Taught a Machine to Chat</h2>
+            <p class="text-lg md:text-xl text-gray-600 mb-8">
+                Learn about the computer scientist who created one of the first chatbots and then became a leading critic of artificial intelligence.
+            </p>
+            <img src="https://placehold.co/800x400/292524/ffffff?text=Joseph+Weizenbaum+Portrait" alt="A portrait of Joseph Weizenbaum" class="w-full h-auto rounded-xl shadow-lg mb-8">
+            <button onclick="goToSlide(2)" class="bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">Start</button>
+        </div>
+
+        <!-- Slide 2: The Creation of ELIZA -->
+        <div id="slide-2" class="slide">
+            <h3 class="text-3xl font-bold mb-4 text-sky-800">The Creation of ELIZA</h3>
+            <div class="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8">
+                <img src="https://placehold.co/500x300/e0f2fe/1e40af?text=ELIZA+Chatbot" alt="Illustration of a chatbot interface with a text cursor" class="rounded-xl shadow-lg md:w-1/2">
+                <div class="md:w-1/2">
+                    <p class="text-lg text-gray-600 mb-4">
+                        In the mid-1960s, Weizenbaum created **ELIZA**, a computer program that could mimic a conversation. It was designed to act like a Rogerian psychotherapist, simply reflecting the user's questions back to them.
+                    </p>
+                    <p class="text-lg text-gray-600">
+                        ELIZA didn't actually understand what the user was saying. It used simple rules and keyword matching to create its responses, but many people were convinced they were talking to a real, intelligent being.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: The ELIZA Effect -->
+        <div id="slide-3" class="slide">
+            <h3 class="text-3xl font-bold mb-4 text-sky-800">The ELIZA Effect</h3>
+            <div class="space-y-6">
+                <div class="p-6 bg-blue-50 rounded-lg shadow-inner">
+                    <h4 class="text-2xl font-bold text-blue-800 mb-2">Belief in a Machine</h4>
+                    <p class="text-lg text-gray-600">
+                        Weizenbaum was shocked by how easily people were fooled by ELIZA. Even his own secretary, who knew it was a program, began confiding in it as if it were a real person.
+                    </p>
+                </div>
+                <div class="p-6 bg-blue-50 rounded-lg shadow-inner">
+                    <h4 class="text-2xl font-bold text-blue-800 mb-2">The Dangers of Deception</h4>
+                    <p class="text-lg text-gray-600">
+                        He realized that people were so eager to believe a computer was intelligent that they would project human feelings and understanding onto a very simple program. He called this phenomenon the **"ELIZA effect."**
+                    </p>
+                </div>
+                <div class="p-6 bg-blue-50 rounded-lg shadow-inner">
+                    <h4 class="text-2xl font-bold text-blue-800 mb-2">A Critical Turn</h4>
+                    <p class="text-lg text-gray-600">
+                        This experience changed Weizenbaum's views. He went from being a pioneer of AI to a vocal critic, warning about the dangers of blindly trusting technology.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Legacy and Ethics in AI -->
+        <div id="slide-4" class="slide">
+            <h3 class="text-3xl font-bold mb-4 text-sky-800">A Call for Responsibility</h3>
+            <div class="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8">
+                <img src="https://placehold.co/500x300/a3e635/1e40af?text=AI+Ethics" alt="Illustration of a person and a robot handshaking" class="rounded-xl shadow-lg md:w-1/2">
+                <div class="md:w-1/2">
+                    <p class="text-lg text-gray-600 mb-4">
+                        Weizenbaum's book, *Computer Power and Human Reason*, argued that computers should not be used for tasks that require human qualities like compassion, judgment, and wisdom.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-4">
+                        He believed that while machines could be incredibly useful tools, we should never delegate our most important decisions to them. His work helped create the field of **AI ethics**, which is more important now than ever before.
+                    </p>
+                    <a href="https://plato.stanford.edu/entries/weizenbaum/" target="_blank" class="inline-block bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-transform transform hover:scale-105">
+                        Explore Weizenbaum's philosophy
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const indicators = document.getElementById('slide-indicators');
+        let currentSlide = 0;
+
+        function updateIndicators() {
+            indicators.innerHTML = '';
+            slides.forEach((_, index) => {
+                const indicator = document.createElement('span');
+                indicator.className = `w-3 h-3 rounded-full mx-1 transition-all duration-300 ${index === currentSlide ? 'bg-sky-800' : 'bg-gray-400'}`;
+                indicator.onclick = () => goToSlide(index + 1);
+                indicators.appendChild(indicator);
+            });
+        }
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+            });
+            slides[index - 1].classList.add('active');
+            currentSlide = index - 1;
+            updateIndicators();
+        }
+
+        function goToSlide(slideIndex) {
+            showSlide(slideIndex);
+        }
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (currentSlide > 0) {
+                goToSlide(currentSlide);
+            }
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            if (currentSlide < slides.length - 1) {
+                goToSlide(currentSlide + 2);
+            }
+        });
+
+        // Initial setup
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(1);
+        });
+    </script>
+</body>
+</html>
