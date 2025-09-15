@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allen Newell: The Architect of AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0fdfa;
+            color: #1f2937;
+        }
+        .slide {
+            display: none;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        .slide.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <div id="presentation-container" class="bg-white rounded-2xl shadow-xl max-w-4xl w-full mx-auto p-8 md:p-12">
+
+        <!-- Slide Navigation -->
+        <div class="flex justify-center items-center space-x-4 mb-8">
+            <button id="prevBtn" class="bg-teal-500 text-white p-2 rounded-full hover:bg-teal-600 transition-colors duration-200 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <div id="slide-indicators" class="flex space-x-2"></div>
+            <button id="nextBtn" class="bg-teal-500 text-white p-2 rounded-full hover:bg-teal-600 transition-colors duration-200 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Slide 1: Introduction -->
+        <div id="slide-1" class="slide active text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-teal-800">Allen Newell</h1>
+            <h2 class="text-2xl md:text-3xl font-medium text-gray-700 mb-6">The Architect of AI</h2>
+            <p class="text-lg md:text-xl text-gray-600 mb-8">
+                Explore the life and work of a founding father of artificial intelligence and cognitive science.
+            </p>
+            <img src="https://placehold.co/800x400/0f766e/ffffff?text=Allen+Newell+Portrait" alt="A portrait of Allen Newell" class="w-full h-auto rounded-xl shadow-lg mb-8">
+            <button onclick="goToSlide(2)" class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">Start</button>
+        </div>
+
+        <!-- Slide 2: The Collaboration -->
+        <div id="slide-2" class="slide">
+            <h3 class="text-3xl font-bold mb-4 text-teal-800">The Power of Collaboration</h3>
+            <div class="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8">
+                <img src="https://placehold.co/500x300/a3e635/1e40af?text=Newell+and+Simon" alt="Illustration of Allen Newell and Herbert Simon" class="rounded-xl shadow-lg md:w-1/2">
+                <div class="md:w-1/2">
+                    <p class="text-lg text-gray-600 mb-4">
+                        Newell's most impactful work was a result of his long-standing partnership with fellow computer scientist and economist **Herbert A. Simon**.
+                    </p>
+                    <p class="text-lg text-gray-600">
+                        They were pioneers in creating computer programs that could simulate human problem-solving processes, laying the foundation for modern AI.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: The Logic Theorist -->
+        <div id="slide-3" class="slide">
+            <h3 class="text-3xl font-bold mb-4 text-teal-800">The Logic Theorist</h3>
+            <div class="space-y-6">
+                <div class="p-6 bg-emerald-50 rounded-lg shadow-inner">
+                    <h4 class="text-2xl font-bold text-teal-800 mb-2">The First AI Program</h4>
+                    <p class="text-lg text-gray-600">
+                        In 1956, Newell and Simon developed the **Logic Theorist**, widely considered the first true artificial intelligence program.
+                    </p>
+                </div>
+                <div class="p-6 bg-emerald-50 rounded-lg shadow-inner">
+                    <h4 class="text-2xl font-bold text-teal-800 mb-2">Thinking Like a Human</h4>
+                    <p class="text-lg text-gray-600">
+                        Instead of just computing, the program was designed to solve problems using heuristics, or "rules of thumb," much like a human would. It successfully proved 38 of the 52 theorems from the first chapter of a famous mathematics book.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: General Problem Solver -->
+        <div id="slide-4" class="slide">
+            <h3 class="text-3xl font-bold mb-4 text-teal-800">The General Problem Solver (GPS)</h3>
+            <div class="space-y-6">
+                <div class="p-6 bg-emerald-50 rounded-lg shadow-inner">
+                    <h4 class="text-2xl font-bold text-teal-800 mb-2">A Universal Approach</h4>
+                    <p class="text-lg text-gray-600">
+                        Building on the Logic Theorist, they created GPS, a program designed to solve a wider range of problems by using a technique called **means-ends analysis**.
+                    </p>
+                </div>
+                <div class="p-6 bg-emerald-50 rounded-lg shadow-inner">
+                    <h4 class="text-2xl font-bold text-teal-800 mb-2">How it Worked</h4>
+                    <p class="text-lg text-gray-600">
+                        GPS worked by figuring out the difference between the current state and the goal state, and then finding a way to reduce that difference, a process that mimics how we solve everyday puzzles.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: The Legacy -->
+        <div id="slide-5" class="slide">
+            <h3 class="text-3xl font-bold mb-4 text-teal-800">A Lasting Legacy</h3>
+            <div class="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8">
+                <img src="https://placehold.co/500x300/a8a29e/1f2937?text=Symbols+and+Mind" alt="Illustration of a human mind with symbols" class="rounded-xl shadow-lg md:w-1/2">
+                <div class="md:w-1/2">
+                    <p class="text-lg text-gray-600 mb-4">
+                        Newell and Simon's work led to the **physical symbol system hypothesis**, a foundational idea in AI that suggests that a system can show intelligence if it can manipulate symbols.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-4">
+                        Their work paved the way for modern AI, showing that machines could do more than just calculate—they could reason, think, and solve problems.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const indicators = document.getElementById('slide-indicators');
+        let currentSlide = 0;
+
+        function updateIndicators() {
+            indicators.innerHTML = '';
+            slides.forEach((_, index) => {
+                const indicator = document.createElement('span');
+                indicator.className = `w-3 h-3 rounded-full mx-1 transition-all duration-300 ${index === currentSlide ? 'bg-teal-800' : 'bg-gray-400'}`;
+                indicator.onclick = () => goToSlide(index + 1);
+                indicators.appendChild(indicator);
+            });
+        }
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+            });
+            slides[index - 1].classList.add('active');
+            currentSlide = index - 1;
+            updateIndicators();
+        }
+
+        function goToSlide(slideIndex) {
+            showSlide(slideIndex);
+        }
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (currentSlide > 0) {
+                goToSlide(currentSlide);
+            }
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            if (currentSlide < slides.length - 1) {
+                goToSlide(currentSlide + 2);
+            }
+        });
+
+        // Initial setup
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(1);
+        });
+    </script>
+</body>
+</html>
