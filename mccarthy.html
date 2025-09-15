@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John McCarthy: The Father of AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f9ff;
+            color: #1e3a8a;
+        }
+        .slide {
+            display: none;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        .slide.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <div id="presentation-container" class="bg-white rounded-2xl shadow-xl max-w-4xl w-full mx-auto p-8 md:p-12">
+
+        <!-- Slide Navigation -->
+        <div class="flex justify-center items-center space-x-4 mb-8">
+            <button id="prevBtn" class="bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 transition-colors duration-200 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <div id="slide-indicators" class="flex space-x-2"></div>
+            <button id="nextBtn" class="bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 transition-colors duration-200 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Slide 1: Introduction -->
+        <div id="slide-1" class="slide active text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-blue-950">John McCarthy</h1>
+            <h2 class="text-2xl md:text-3xl font-medium text-gray-700 mb-6">The Father of AI</h2>
+            <p class="text-lg md:text-xl text-gray-600 mb-8">
+                Explore the life of the computer scientist who gave artificial intelligence its name and helped shape its future.
+            </p>
+            <img src="https://placehold.co/800x400/1e3a8a/ffffff?text=John+McCarthy" alt="A portrait of John McCarthy" class="w-full h-auto rounded-xl shadow-lg mb-8">
+            <button onclick="goToSlide(2)" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">Start</button>
+        </div>
+
+        <!-- Slide 2: The Dartmouth Workshop -->
+        <div id="slide-2" class="slide">
+            <h3 class="text-3xl font-bold mb-4 text-blue-950">The Birth of a Field</h3>
+            <div class="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8">
+                <img src="https://placehold.co/500x300/e9d5ff/1e3a8a?text=Dartmouth+College" alt="Illustration of Dartmouth College" class="rounded-xl shadow-lg md:w-1/2">
+                <div class="md:w-1/2">
+                    <p class="text-lg text-gray-600 mb-4">
+                        In the summer of 1956, John McCarthy and a small group of brilliant minds gathered at **Dartmouth College** for a workshop.
+                    </p>
+                    <p class="text-lg text-gray-600">
+                        This meeting is considered the official birth of artificial intelligence as a field, and it was here that McCarthy first introduced the term **"Artificial Intelligence."**
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: LISP -->
+        <div id="slide-3" class="slide">
+            <h3 class="text-3xl font-bold mb-4 text-blue-950">Creating a New Language</h3>
+            <div class="space-y-6">
+                <div class="p-6 bg-amber-50 rounded-lg shadow-inner">
+                    <h4 class="text-2xl font-bold text-blue-950 mb-2">A Language for AI</h4>
+                    <p class="text-lg text-gray-600">
+                        McCarthy understood that computers needed a different kind of language to handle the symbolic thinking required for AI. He created the **LISP** programming language.
+                    </p>
+                </div>
+                <div class="p-6 bg-amber-50 rounded-lg shadow-inner">
+                    <h4 class="text-2xl font-bold text-blue-950 mb-2">A Lasting Legacy</h4>
+                    <p class="text-lg text-gray-600">
+                        LISP became the go-to language for AI research for many decades and influenced the design of many other programming languages.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: A Vision for the Future -->
+        <div id="slide-4" class="slide">
+            <h3 class="text-3xl font-bold mb-4 text-blue-950">A Vision for the Future</h3>
+            <div class="space-y-6">
+                <div class="p-6 bg-amber-50 rounded-lg shadow-inner">
+                    <h4 class="text-2xl font-bold text-blue-950 mb-2">Time-Sharing</h4>
+                    <p class="text-lg text-gray-600">
+                        McCarthy was a pioneer in **time-sharing**, a technology that allowed multiple users to use a single computer at the same time by taking turns. This was a revolutionary idea.
+                    </p>
+                </div>
+                <div class="p-6 bg-amber-50 rounded-lg shadow-inner">
+                    <h4 class="text-2xl font-bold text-blue-950 mb-2">Predicting the Cloud</h4>
+                    <p class="text-lg text-gray-600">
+                        He famously predicted that computing would eventually be a public utility, much like electricity or water. This is the basic idea behind **cloud computing**!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const indicators = document.getElementById('slide-indicators');
+        let currentSlide = 0;
+
+        function updateIndicators() {
+            indicators.innerHTML = '';
+            slides.forEach((_, index) => {
+                const indicator = document.createElement('span');
+                indicator.className = `w-3 h-3 rounded-full mx-1 transition-all duration-300 ${index === currentSlide ? 'bg-orange-500' : 'bg-gray-400'}`;
+                indicator.onclick = () => goToSlide(index + 1);
+                indicators.appendChild(indicator);
+            });
+        }
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+            });
+            slides[index - 1].classList.add('active');
+            currentSlide = index - 1;
+            updateIndicators();
+        }
+
+        function goToSlide(slideIndex) {
+            showSlide(slideIndex);
+        }
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (currentSlide > 0) {
+                goToSlide(currentSlide);
+            }
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            if (currentSlide < slides.length - 1) {
+                goToSlide(currentSlide + 2);
+            }
+        });
+
+        // Initial setup
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(1);
+        });
+    </script>
+</body>
+</html>
