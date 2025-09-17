@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arthur Samuel: The Pioneer of Machine Learning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcfcfc;
+            color: #4b5563;
+        }
+        .slide {
+            display: none;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        .slide.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <div id="presentation-container" class="bg-white rounded-2xl shadow-xl max-w-4xl w-full mx-auto p-8 md:p-12">
+
+        <!-- Slide Navigation -->
+        <div class="flex justify-center items-center space-x-4 mb-8">
+            <button id="prevBtn" class="bg-stone-500 text-white p-2 rounded-full hover:bg-stone-600 transition-colors duration-200 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <div id="slide-indicators" class="flex space-x-2"></div>
+            <button id="nextBtn" class="bg-stone-500 text-white p-2 rounded-full hover:bg-stone-600 transition-colors duration-200 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Slide 1: Introduction -->
+        <div id="slide-1" class="slide active text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-stone-900">Arthur Samuel</h1>
+            <h2 class="text-2xl md:text-3xl font-medium text-gray-700 mb-6">The Pioneer of Machine Learning</h2>
+            <p class="text-lg md:text-xl text-gray-600 mb-8">
+                Learn about the man who taught a computer to learn on its own and gave us the field of machine learning.
+            </p>
+            <img src="https://placehold.co/800x400/292524/ffffff?text=Arthur+Samuel" alt="A portrait of Arthur Samuel" class="w-full h-auto rounded-xl shadow-lg mb-8">
+            <button onclick="goToSlide(2)" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">Start</button>
+        </div>
+
+        <!-- Slide 2: The Checkers Program -->
+        <div id="slide-2" class="slide">
+            <h3 class="text-3xl font-bold mb-4 text-stone-900">The Checkers-Playing Computer</h3>
+            <div class="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8">
+                <img src="https://placehold.co/500x300/fde047/78350f?text=Checkers+Board" alt="Illustration of a checkers board with pieces" class="rounded-xl shadow-lg md:w-1/2">
+                <div class="md:w-1/2">
+                    <p class="text-lg text-gray-600 mb-4">
+                        In the 1950s, Arthur Samuel created a computer program that played the game of **checkers**.
+                    </p>
+                    <p class="text-lg text-gray-600">
+                        The program was able to learn from its own mistakes. It would get better at the game the more it played, eventually beating its own creator!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Coining the Term -->
+        <div id="slide-3" class="slide">
+            <h3 class="text-3xl font-bold mb-4 text-stone-900">What Is Machine Learning?</h3>
+            <div class="space-y-6">
+                <div class="p-6 bg-stone-100 rounded-lg shadow-inner">
+                    <h4 class="text-2xl font-bold text-stone-900 mb-2">Defining the Field</h4>
+                    <p class="text-lg text-gray-600">
+                        Arthur Samuel famously defined **machine learning** as: "The field of study that gives computers the ability to learn without being explicitly programmed."
+                    </p>
+                </div>
+                <div class="p-6 bg-stone-100 rounded-lg shadow-inner">
+                    <h4 class="text-2xl font-bold text-stone-900 mb-2">Beyond Checkers</h4>
+                    <p class="text-lg text-gray-600">
+                        His simple checkers program showed the world that computers could be taught to improve their own performance and find new solutions without human guidance.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: A Lasting Legacy -->
+        <div id="slide-4" class="slide">
+            <h3 class="text-3xl font-bold mb-4 text-stone-900">A Lasting Legacy</h3>
+            <p class="text-lg text-gray-600 mb-6">
+                Arthur Samuel’s innovative thinking laid the groundwork for today's incredible AI technologies. Every time a computer learns to recognize a face, translate a language, or recommend a song, it is using principles first demonstrated by his pioneering work.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-center">
+                <div class="p-4 bg-stone-100 rounded-lg shadow-inner">
+                    <h4 class="text-xl font-bold text-stone-900">Early AI</h4>
+                    <p class="text-gray-600">Built one of the first self-learning programs.</p>
+                </div>
+                <div class="p-4 bg-stone-100 rounded-lg shadow-inner">
+                    <h4 class="text-xl font-bold text-stone-900">Foundational Ideas</h4>
+                    <p class="text-gray-600">Coined the term "machine learning" and defined its goals.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const indicators = document.getElementById('slide-indicators');
+        let currentSlide = 0;
+
+        function updateIndicators() {
+            indicators.innerHTML = '';
+            slides.forEach((_, index) => {
+                const indicator = document.createElement('span');
+                indicator.className = `w-3 h-3 rounded-full mx-1 transition-all duration-300 ${index === currentSlide ? 'bg-amber-600' : 'bg-gray-400'}`;
+                indicator.onclick = () => goToSlide(index + 1);
+                indicators.appendChild(indicator);
+            });
+        }
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+            });
+            slides[index - 1].classList.add('active');
+            currentSlide = index - 1;
+            updateIndicators();
+        }
+
+        function goToSlide(slideIndex) {
+            showSlide(slideIndex);
+        }
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (currentSlide > 0) {
+                goToSlide(currentSlide);
+            }
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            if (currentSlide < slides.length - 1) {
+                goToSlide(currentSlide + 2);
+            }
+        });
+
+        // Initial setup
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(1);
+        });
+    </script>
+</body>
+</html>
