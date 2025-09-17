@@ -1,10 +1,247 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>My Awesome Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Pioneers of Artificial Intelligence</title>
+    <!-- Use the Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            /* A subtle radial gradient for the background */
+            background: #1a1a2e; /* Fallback color */
+            background: radial-gradient(circle, #1a1a2e 0%, #0f0a1f 100%);
+            color: #e0e0e0;
+        }
+
+        .gradient-text {
+            /* Text gradient for the title */
+            background: -webkit-linear-gradient(45deg, #FF6B6B, #5562d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .button-gradient {
+            background-image: linear-gradient(to right, #6b46c1, #a361d7, #6b46c1);
+            background-size: 200% auto;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .button-gradient:hover {
+            background-position: right center;
+            box-shadow: 0 4px 15px 0 rgba(107, 70, 193, 0.75);
+        }
+
+        .card-hover-scale:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .border-animation {
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            background-origin: border-box;
+        }
+
+        .border-animation::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, #FF6B6B, #5562d4);
+            z-index: -1;
+            margin: -2px;
+            border-radius: inherit;
+        }
+    </style>
 </head>
-<body>
-<h1>Hello, World!</h1>
-<p>Welcome to my first GitHub Pages website.</p>
+<body class="p-8 md:p-12 lg:p-16">
+
+    <!-- Header Section -->
+    <header class="text-center mb-12">
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight gradient-text">
+            The Pioneers of Artificial Intelligence
+        </h1>
+        <p class="mt-4 text-lg md:text-xl max-w-4xl mx-auto leading-relaxed text-gray-300">
+            An AI pioneer is an individual whose visionary work and foundational contributions have fundamentally shaped the field of artificial intelligence. From ancient philosophers who conceptualized logic to modern-day researchers building the future of machine learning, these pioneers have laid the conceptual and technological groundwork that allows us to create intelligent systems. Their work represents not just breakthroughs, but the very building blocks upon which the entire discipline rests.
+        </p>
+    </header>
+
+    <!-- Pioneers Grid Section -->
+    <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Pioneer Card 1: Al-Khwarizmi -->
+        <div class="bg-gray-800 rounded-2xl p-6 flex flex-col items-center text-center shadow-lg transition-all duration-300 ease-in-out card-hover-scale">
+            <h2 class="text-2xl font-bold text-teal-300">Al-Khwarizmi</h2>
+            <span class="text-sm font-semibold text-gray-400 mt-1 mb-4">(c. 780 - c. 850)</span>
+            <img class="rounded-full w-32 h-32 object-cover mb-4 border-2 border-purple-500" src="https://uwaterloo.ca/math/sites/default/files/uploads/images/al-khwarizmi_portrait-250x361.jpeg" alt="Portrait of Al-Khwarizmi">
+            <p class="text-sm text-gray-300 mb-6 flex-grow">
+                A Persian polymath who is often called the "father of algebra." His work on algorithms and systematic problem-solving laid the foundational principles for modern computation.
+            </p>
+            <a href="Khwarizimi.html" class="w-full text-center px-6 py-3 rounded-full text-white font-bold button-gradient shadow-md transform hover:scale-105">
+                View Slides
+            </a>
+        </div>
+
+        <!-- Pioneer Card 2: George Boole -->
+        <div class="bg-gray-800 rounded-2xl p-6 flex flex-col items-center text-center shadow-lg transition-all duration-300 ease-in-out card-hover-scale">
+            <h2 class="text-2xl font-bold text-teal-300">George Boole</h2>
+            <span class="text-sm font-semibold text-gray-400 mt-1 mb-4">(1815 - 1864)</span>
+            <img class="rounded-full w-32 h-32 object-cover mb-4 border-2 border-purple-500" src="https://cdn.britannica.com/68/6768-050-A7F2D15C/engraving-George-Boole.jpg" alt="Portrait of George Boole">
+            <p class="text-sm text-gray-300 mb-6 flex-grow">
+                The creator of Boolean algebra, a form of logic that is the fundamental basis for all modern digital computing and information theory.
+            </p>
+            <a href="Boole.html" class="w-full text-center px-6 py-3 rounded-full text-white font-bold button-gradient shadow-md transform hover:scale-105">
+                View Slides
+            </a>
+        </div>
+
+        <!-- Pioneer Card 3: Arthur Samuel -->
+        <div class="bg-gray-800 rounded-2xl p-6 flex flex-col items-center text-center shadow-lg transition-all duration-300 ease-in-out card-hover-scale">
+            <h2 class="text-2xl font-bold text-teal-300">Arthur Samuel</h2>
+            <span class="text-sm font-semibold text-gray-400 mt-1 mb-4">(1901 - 1990)</span>
+            <img class="rounded-full w-32 h-32 object-cover mb-4 border-2 border-purple-500" src="https://cms.interestingengineering.com/wp-content/uploads/2025/03/275x305-IE-Bio-Profile-Arthus-.jpg" alt="Portrait of Arthur Samuel">
+            <p class="text-sm text-gray-300 mb-6 flex-grow">
+                Pioneered the term "machine learning" and developed a checkers-playing program that could learn from its own experience, a landmark in self-learning systems.
+            </p>
+            <a href="Samuel.html" class="w-full text-center px-6 py-3 rounded-full text-white font-bold button-gradient shadow-md transform hover:scale-105">
+                View Slides
+            </a>
+        </div>
+
+        <!-- Pioneer Card 4: Alan Turing -->
+        <div class="bg-gray-800 rounded-2xl p-6 flex flex-col items-center text-center shadow-lg transition-all duration-300 ease-in-out card-hover-scale">
+            <h2 class="text-2xl font-bold text-teal-300">Alan Turing</h2>
+            <span class="text-sm font-semibold text-gray-400 mt-1 mb-4">(1912 - 1954)</span>
+            <img class="rounded-full w-32 h-32 object-cover mb-4 border-2 border-purple-500" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Alan_turing_header.jpg" alt="Portrait of Alan Turing">
+            <p class="text-sm text-gray-300 mb-6 flex-grow">
+                Known as the "father of theoretical computer science and artificial intelligence." He created the Turing Test, a measure of a machine's ability to exhibit intelligent behavior.
+            </p>
+            <a href="Turing.html" class="w-full text-center px-6 py-3 rounded-full text-white font-bold button-gradient shadow-md transform hover:scale-105">
+                View Slides
+            </a>
+        </div>
+
+        <!-- Pioneer Card 5: Herbert Simon -->
+        <div class="bg-gray-800 rounded-2xl p-6 flex flex-col items-center text-center shadow-lg transition-all duration-300 ease-in-out card-hover-scale">
+            <h2 class="text-2xl font-bold text-teal-300">Herbert Simon</h2>
+            <span class="text-sm font-semibold text-gray-400 mt-1 mb-4">(1916 - 2001)</span>
+            <img class="rounded-full w-32 h-32 object-cover mb-4 border-2 border-purple-500" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj_AS4d1iuoL-_pmam2Q5WVx_i71dYgwai7Q&s" alt="Portrait of Herbert Simon">
+            <p class="text-sm text-gray-300 mb-6 flex-grow">
+                A Nobel laureate who contributed to cognitive psychology and artificial intelligence. He co-authored early AI programs like the Logic Theory Machine and the General Problem Solver.
+            </p>
+            <a href="Simon.html" class="w-full text-center px-6 py-3 rounded-full text-white font-bold button-gradient shadow-md transform hover:scale-105">
+                View Slides
+            </a>
+        </div>
+
+        <!-- Pioneer Card 6: Joseph Weizenbaum -->
+        <div class="bg-gray-800 rounded-2xl p-6 flex flex-col items-center text-center shadow-lg transition-all duration-300 ease-in-out card-hover-scale">
+            <h2 class="text-2xl font-bold text-teal-300">Joseph Weizenbaum</h2>
+            <span class="text-sm font-semibold text-gray-400 mt-1 mb-4">(1923 - 2008)</span>
+            <img class="rounded-full w-32 h-32 object-cover mb-4 border-2 border-purple-500" src="https://news.mit.edu/sites/default/files/images/200803/200908311113135495.jpg" alt="Portrait of Joseph Weizenbaum">
+            <p class="text-sm text-gray-300 mb-6 flex-grow">
+                Created ELIZA, one of the first conversational programs. His work highlighted the psychological impact of AI and raised early ethical concerns about its use.
+            </p>
+            <a href="Weizenbaum.html" class="w-full text-center px-6 py-3 rounded-full text-white font-bold button-gradient shadow-md transform hover:scale-105">
+                View Slides
+            </a>
+        </div>
+
+        <!-- Pioneer Card 7: Allen Newell -->
+        <div class="bg-gray-800 rounded-2xl p-6 flex flex-col items-center text-center shadow-lg transition-all duration-300 ease-in-out card-hover-scale">
+            <h2 class="text-2xl font-bold text-teal-300">Allen Newell</h2>
+            <span class="text-sm font-semibold text-gray-400 mt-1 mb-4">(1927 - 1992)</span>
+            <img class="rounded-full w-32 h-32 object-cover mb-4 border-2 border-purple-500" src="https://ztd-euwest2-prod-s3.s3.eu-west-2.amazonaws.com/Allen_Newell_b3c55acdc9.jpg" alt="Portrait of Allen Newell">
+            <p class="text-sm text-gray-300 mb-6 flex-grow">
+                A leading figure in cognitive psychology and AI, he co-founded the field with Herbert Simon and developed the Logic Theory Machine and the General Problem Solver.
+            </p>
+            <a href="Newell.html" class="w-full text-center px-6 py-3 rounded-full text-white font-bold button-gradient shadow-md transform hover:scale-105">
+                View Slides
+            </a>
+        </div>
+
+        <!-- Pioneer Card 8: John McCarthy -->
+        <div class="bg-gray-800 rounded-2xl p-6 flex flex-col items-center text-center shadow-lg transition-all duration-300 ease-in-out card-hover-scale">
+            <h2 class="text-2xl font-bold text-teal-300">John McCarthy</h2>
+            <span class="text-sm font-semibold text-gray-400 mt-1 mb-4">(1927 - 2011)</span>
+            <img class="rounded-full w-32 h-32 object-cover mb-4 border-2 border-purple-500" src="https://media.wired.com/photos/59327c782a990b06268ab0b1/master/pass/john-mccarthy.png" alt="Portrait of John McCarthy">
+            <p class="text-sm text-gray-300 mb-6 flex-grow">
+                The computer scientist who coined the term "artificial intelligence" in 1956 and developed the LISP programming language, a cornerstone of early AI research.
+            </p>
+            <a href="McCarthy.html" class="w-full text-center px-6 py-3 rounded-full text-white font-bold button-gradient shadow-md transform hover:scale-105">
+                View Slides
+            </a>
+        </div>
+
+        <!-- Pioneer Card 9: Marvin Minsky -->
+        <div class="bg-gray-800 rounded-2xl p-6 flex flex-col items-center text-center shadow-lg transition-all duration-300 ease-in-out card-hover-scale">
+            <h2 class="text-2xl font-bold text-teal-300">Marvin Minsky</h2>
+            <span class="text-sm font-semibold text-gray-400 mt-1 mb-4">(1927 - 2016)</span>
+            <img class="rounded-full w-32 h-32 object-cover mb-4 border-2 border-purple-500" src="https://optica-org-web-afd-f9abf4byhbacgfgk.z02.azurefd.net/optica/media/osa.media/fellow%20lecturer%20features/marvin_minsky.jpg?t=637492366772346635" alt="Portrait of Marvin Minsky">
+            <p class="text-sm text-gray-300 mb-6 flex-grow">
+                A cognitive scientist and co-founder of the MIT AI Laboratory. He made seminal contributions to artificial neural networks and robotics.
+            </p>
+            <a href="Minsky.html" class="w-full text-center px-6 py-3 rounded-full text-white font-bold button-gradient shadow-md transform hover:scale-105">
+                View Slides
+            </a>
+        </div>
+
+        <!-- Pioneer Card 10: Geoffrey Hinton -->
+        <div class="bg-gray-800 rounded-2xl p-6 flex flex-col items-center text-center shadow-lg transition-all duration-300 ease-in-out card-hover-scale">
+            <h2 class="text-2xl font-bold text-teal-300">Geoffrey Hinton</h2>
+            <span class="text-sm font-semibold text-gray-400 mt-1 mb-4">(1947 - Present)</span>
+            <img class="rounded-full w-32 h-32 object-cover mb-4 border-2 border-purple-500" src="https://awards.acm.org/binaries/content/gallery/acm/awards/photo/h-j/hinton_4791679" alt="Portrait of Geoffrey Hinton">
+            <p class="text-sm text-gray-300 mb-6 flex-grow">
+                Known as the "Godfather of AI," his research on deep learning and neural networks has been pivotal to the modern AI revolution.
+            </p>
+            <a href="Hinton.html" class="w-full text-center px-6 py-3 rounded-full text-white font-bold button-gradient shadow-md transform hover:scale-105">
+                View Slides
+            </a>
+        </div>
+
+        <!-- Pioneer Card 11: Fei-Fei Li -->
+        <div class="bg-gray-800 rounded-2xl p-6 flex flex-col items-center text-center shadow-lg transition-all duration-300 ease-in-out card-hover-scale">
+            <h2 class="text-2xl font-bold text-teal-300">Fei-Fei Li</h2>
+            <span class="text-sm font-semibold text-gray-400 mt-1 mb-4">(1976 - Present)</span>
+            <img class="rounded-full w-32 h-32 object-cover mb-4 border-2 border-purple-500" src="https://engineering.stanford.edu/sites/default/files/styles/large_square/public/media/person/fei-fei-li1550534393295.jpg?h=16ab892d&itok=ikst0vW_" alt="Portrait of Fei-Fei Li">
+            <p class="text-sm text-gray-300 mb-6 flex-grow">
+                A computer scientist and a key figure in the field of computer vision. She led the creation of ImageNet, a massive visual database that catalyzed the deep learning boom.
+            </p>
+            <a href="Li.html" class="w-full text-center px-6 py-3 rounded-full text-white font-bold button-gradient shadow-md transform hover:scale-105">
+                View Slides
+            </a>
+        </div>
+
+        <!-- Pioneer Card 12: Ashish Vaswani -->
+        <div class="bg-gray-800 rounded-2xl p-6 flex flex-col items-center text-center shadow-lg transition-all duration-300 ease-in-out card-hover-scale">
+            <h2 class="text-2xl font-bold text-teal-300">Ashish Vaswani</h2>
+            <span class="text-sm font-semibold text-gray-400 mt-1 mb-4">(Contemporary)</span>
+            <img class="rounded-full w-32 h-32 object-cover mb-4 border-2 border-purple-500" src="https://pbs.twimg.com/profile_images/1519005015947448320/5XnankyO_400x400.jpg" alt="Portrait of Ashish Vaswani">
+            <p class="text-sm text-gray-300 mb-6 flex-grow">
+                A key author of the "Attention is All You Need" paper, which introduced the Transformer architecture, the foundation for most modern large language models.
+            </p>
+            <a href="Vaswani.html" class="w-full text-center px-6 py-3 rounded-full text-white font-bold button-gradient shadow-md transform hover:scale-105">
+                View Slides
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="text-center mt-12 text-sm text-gray-500">
+        <p>&copy; 2024 AI Pioneers Project. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
+
